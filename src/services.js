@@ -17,7 +17,9 @@ class ApiService {
         
         return categories;
     }
-
+    async getName() {
+        return "deneme";
+    }
     async getSummary() {
         return serializeData(data);
     }
