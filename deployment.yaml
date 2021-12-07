@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: humoq-be-deployment2
+  name: humoq-be2-deployment
   labels:
     uri: api2.humoq.com
 spec:
