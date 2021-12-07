@@ -11,5 +11,5 @@ WORKDIR /app/backend
 RUN yarn
 RUN yarn build
 
-EXPOSE 8002
+EXPOSE 8000
 CMD [ "yarn", "start" ]
