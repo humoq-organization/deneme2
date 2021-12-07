@@ -26,10 +26,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: humoq-be-service
+  name: humoq-be-service2
 spec:
   selector:
-    app: humoq-be
+    app: humoq-be2
   type: NodePort
   ports:
     - name: http
