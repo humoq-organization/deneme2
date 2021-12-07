@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build:
     name: Build, push, and deploy
@@ -23,7 +23,7 @@ jobs:
         run: docker build . --file Dockerfile --tag ${{secrets.DOCKERHUB_USERNAME}}/humoq-be:latest
 
       - name: Push image to Docker Hub
-        run: docker push ${{secrets.DOCKERHUB_USERNAME}}/humoq-be:latest
+        run: docker push ${{secrets.DOCKERHUB_USERNAME}}/humoq-be2:latest
 
       - name: Deploy
         uses: danielr1996/kubectl-action@1.0.0
@@ -36,4 +36,4 @@ jobs:
         with:
           config: ${{ secrets.KUBE_CONFIG }}
           version: v1.21.0
-          command: rollout restart deployment humoq-be-deployment
+          command: rollout restart deployment humoq-be-deployment2

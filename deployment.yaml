@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: humoq-be-deployment
+  name: humoq-be-deployment2
   labels:
-    uri: api.humoq.com
+    uri: api2.humoq.com
 spec:
   selector:
     matchLabels:
-      app: humoq-be
-      uri: api.humoq.com
+      app: humoq-be2
+      uri: api2.humoq.com
   replicas: 1
   template:
     metadata:
       labels:
-        app: humoq-be
+        app: humoq-be2
         uri: api.humoq.com
     spec:
       containers:
-        - name: humoq-be
-          image: humoq/humoq-be:latest
+        - name: humoq-be2
+          image: humoq/humoq-be2:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 8000
+            - containerPort: 8002
 ---
 apiVersion: v1
 kind: Service
@@ -36,4 +36,4 @@ spec:
       protocol: TCP
       nodePort: 30003
       port: 80
-      targetPort: 8000
+      targetPort: 8002
