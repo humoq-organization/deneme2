@@ -14,7 +14,7 @@ spec:
     metadata:
       labels:
         app: humoq-be2
-        uri: api.humoq.com
+        uri: api2.humoq.com
     spec:
       containers:
         - name: humoq-be2
